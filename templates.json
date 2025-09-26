@@ -123,6 +123,65 @@
             "customMessage": ""
         },
         {
+            "img": "arc-logo.png",
+            "folder": "cppQML",
+            "description": "C++ Qt 6.8.3 QML Application for QGroundControl",
+            "runtime": "Qt 6",
+            "language": "C++",
+            "debugPort": "2232",
+            "debugPort2": "2233",
+            "debugSSHPort": "2231",
+            "multiContainer": true,
+            "support": "Toradex",
+            "status": "ok",
+            "customMessage": "https://archtec.io",
+            "tests": {
+                "debuggers": {
+                    "local": ["Local AMD64"],
+                    "arm": ["Torizon arm32"],
+                    "arm64": ["Torizon arm64"]
+                },
+                "debuggerConsole": "cppdbg",
+                "mainFile": "main.cpp",
+                "mainFileBreakpointLine": 19,
+                "successDebugMessage": "Hello Archtec for Torizon!"
+
+            },
+            "customFields": [
+                {
+                    "id": "qt_license_login",
+                    "label": "Qt Enterprise license login",
+                    "placeHolder": "Leave empty for using open source Qt",
+                    "default": "",
+                    "type": "text",
+                    "validRegex": "^.*$",
+                    "errorMessage": "Invalid Qt Enterprise license login.",
+                    "description": "Qt Enterprise license username. To learn more about Qt Enterprise and get a free evaluation license, please go to https://www.qt.io/qt-and-toradex"
+                },
+                {
+                    "id": "qt_license_password",
+                    "label": "Qt Enterprise license password",
+                    "placeHolder": "Leave empty for using open source Qt",
+                    "default": "",
+                    "type": "password",
+                    "featureUsage": 0,
+                    "validRegex": "^.*$",
+                    "errorMessage": "Invalid Qt Enterprise license password.",
+                    "description": "Qt Enterprise license password. To learn more about Qt Enterprise and get a free evaluation license, please go to https://www.qt.io/qt-and-toradex"
+                },
+                {
+                    "id": "container",
+                    "label": "Container name (docker-compose service)",
+                    "placeHolder": "",
+                    "default": "",
+                    "type": "text",
+                    "validRegex": "^[a-z0-9_\\-]+$",
+                    "errorMessage": "Invalid Docker image name. Must not be empty. Accepts alphanumeric characters, -, and _",
+                    "description": "Container name (docker-compose service)"
+                }
+            ]
+        },
+        {
             "img": "qt6qml.png",
             "folder": "cppQML",
             "description": "C++ Qt 6 QML Application",
